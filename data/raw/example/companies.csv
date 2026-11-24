@@ -1,0 +1,7 @@
+ticker,company_name,role,fiscal_year_end,valuation_date,currency,sector,share_price,diluted_shares,total_debt,cash,non_controlling_interest,preferred_stock,investments
+ALPH,Alpha Software,target,2025-12-31,2026-03-31,USD,Application Software,42.00,120.0,650.0,240.0,0.0,0.0,35.0
+BRVO,Bravo Systems,peer,2025-12-31,2026-03-31,USD,Application Software,58.00,95.0,420.0,180.0,0.0,0.0,20.0
+CRWN,Crown Cloud,peer,2025-12-31,2026-03-31,USD,Application Software,76.00,82.0,510.0,225.0,0.0,0.0,30.0
+DLTA,Delta Digital,peer,2025-12-31,2026-03-31,USD,Application Software,35.00,155.0,780.0,160.0,15.0,0.0,10.0
+ECHO,Echo Enterprise,peer,2025-12-31,2026-03-31,USD,Application Software,64.00,105.0,360.0,275.0,0.0,0.0,45.0
+FLUX,Flux Technologies,peer,2025-12-31,2026-03-31,USD,Application Software,49.00,130.0,590.0,205.0,0.0,0.0,25.0

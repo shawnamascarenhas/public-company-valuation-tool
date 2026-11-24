@@ -1,0 +1,27 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Editable-install metadata
+src/*.egg-info/
+
+# Generated application artifacts
+outputs/*
+!outputs/.gitkeep
+
+# Local or downloaded datasets
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/example/
+!data/raw/example/*.csv
+data/processed/*
+!data/processed/.gitkeep
+data/cache/

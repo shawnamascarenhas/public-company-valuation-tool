@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "public-company-valuation-tool"
+version = "1.0.0"
+description = "Comparable-company and discounted-cash-flow valuation application"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26,<3.0",
+    "openpyxl>=3.1,<4.0",
+    "pandas>=2.2,<3.0",
+    "plotly>=5.24,<7.0",
+    "requests>=2.31,<3.0",
+    "streamlit>=1.40,<2.0",
+]
+
+[project.scripts]
+valuation-analytics = "valuation_tool.analytics_cli:main"
+valuation-comps = "valuation_tool.comps_cli:main"
+valuation-dcf = "valuation_tool.dcf_cli:main"
+valuation-sec = "valuation_tool.sec_cli:main"
+valuation-validate = "valuation_tool.validate_cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9.0",
+    "pytest-cov>=5.0,<7.0",
+    "ruff>=0.8,<1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["valuation_tool"]
+omit = ["*/app.py", "*_cli.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 85
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
